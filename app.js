@@ -85,12 +85,20 @@
     return movie.aliases ? [String(movie.aliases)] : [];
   }
 
+  function tmdbOf(movie) {
+    return movie.tmdb && typeof movie.tmdb === "object" ? movie.tmdb : {};
+  }
+
   function titleOf(movie) {
     return text(movie.title || movie.name || movie.canonicalTitle, "未命名电影");
   }
 
   function searchable(movie) {
-    return [titleOf(movie), ...aliasesOf(movie)].join(" ").toLocaleLowerCase("zh-CN");
+    const tmdb = tmdbOf(movie);
+    return [titleOf(movie), ...aliasesOf(movie), tmdb.titleZh, tmdb.originalTitle]
+      .filter(Boolean)
+      .join(" ")
+      .toLocaleLowerCase("zh-CN");
   }
 
   function statusOf(event) {
@@ -105,12 +113,12 @@
     const source = event && event.source;
     if (source && typeof source === "object") {
       return {
-        url: text(source.url || source.href),
+        url: text(source.url || source.href, "https://space.bilibili.com/4140446/dynamic"),
         label: text(source.label || source.locator || source.location, "查看来源")
       };
     }
     return {
-      url: text(event && (event.sourceUrl || event.url)),
+      url: text(event && (event.sourceUrl || event.url), "https://space.bilibili.com/4140446/dynamic"),
       label: text(source || (event && (event.sourceLocation || event.locator)), "动态流定位")
     };
   }
@@ -156,8 +164,14 @@
     const date = eventDate(current) || "日期未标注";
     const status = statusOf(current);
     const aliases = aliasesOf(movie);
+    const tmdb = tmdbOf(movie);
     const specialClass = isFormal(movie) ? "" : " rating-stamp--special";
     const tier = isFormal(movie) ? tierOf(current) || ratingLabel(current).charAt(0) : "special";
+    const titleZh = text(tmdb.titleZh);
+    const originalTitle = text(tmdb.originalTitle);
+    const alternateTitle = titleZh && titleZh !== titleOf(movie) ? titleZh : "";
+    const releaseDate = text(tmdb.releaseDate);
+    const cast = Array.isArray(tmdb.cast) ? tmdb.cast.filter(Boolean) : [];
 
     return `
       <article class="movie-card" data-tier="${escapeHtml(tier)}">
@@ -172,6 +186,19 @@
           </div>
           <span class="rating-stamp${specialClass}" aria-label="当前评级：${escapeHtml(ratingLabel(current))}">${escapeHtml(ratingLabel(current))}</span>
         </header>
+        <div class="movie-profile">
+          ${tmdb.poster ? `<img class="movie-profile__poster" src="${escapeHtml(tmdb.poster)}" alt="${escapeHtml(titleZh || titleOf(movie))}海报" loading="lazy" decoding="async">` : ""}
+          <div class="movie-profile__copy">
+            ${(alternateTitle || (originalTitle && originalTitle !== titleZh)) ? `<p class="movie-profile__titles">${alternateTitle ? `<strong>${escapeHtml(alternateTitle)}</strong>` : ""}${originalTitle && originalTitle !== titleZh ? `<span>${escapeHtml(originalTitle)}</span>` : ""}</p>` : ""}
+            <dl class="movie-facts">
+              ${releaseDate ? `<div><dt>上映日期</dt><dd><time datetime="${escapeHtml(releaseDate)}">${escapeHtml(releaseDate)}</time></dd></div>` : ""}
+              ${tmdb.director ? `<div><dt>导演</dt><dd>${escapeHtml(tmdb.director)}</dd></div>` : ""}
+              ${cast.length ? `<div><dt>主演</dt><dd>${cast.map(escapeHtml).join(" / ")}</dd></div>` : ""}
+              ${tmdb.runtime ? `<div><dt>片长</dt><dd>${escapeHtml(tmdb.runtime)} 分钟</dd></div>` : ""}
+            </dl>
+            ${tmdb.overview ? `<p class="movie-overview">${escapeHtml(tmdb.overview)}</p>` : ""}
+          </div>
+        </div>
         <div class="movie-card__body">
           ${lead ? `<p class="event-lead">“${escapeHtml(lead)}”</p>` : ""}
           <p class="card-meta">

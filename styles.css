@@ -817,6 +817,79 @@ select:disabled { cursor: not-allowed; opacity: .4; }
 .movie-card__date span { color: var(--muted); font: .62rem Arial, sans-serif; letter-spacing: .1em; }
 .rating-stamp { color: var(--tier-accent); box-shadow: inset 0 0 0 3px var(--surface-raised), inset 0 0 0 4px currentColor; }
 
+.movie-profile {
+  display: grid;
+  grid-template-columns: 8.5rem minmax(0, 1fr);
+  gap: 1.5rem;
+  padding: 1.5rem 1.8rem;
+  border-bottom: 1px solid var(--line);
+  background: rgb(8 8 7 / 35%);
+}
+
+.movie-profile__poster {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border: 1px solid #4c453a;
+  box-shadow: 0 14px 30px rgb(0 0 0 / 35%);
+}
+
+.movie-profile__copy {
+  min-width: 0;
+}
+
+.movie-profile__titles {
+  display: grid;
+  gap: .2rem;
+  margin: 0 0 1rem;
+}
+
+.movie-profile__titles strong {
+  color: var(--paper-pale);
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.movie-profile__titles span {
+  color: var(--muted);
+  font-family: Arial, sans-serif;
+  font-size: .72rem;
+  letter-spacing: .04em;
+}
+
+.movie-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .7rem 1.5rem;
+  margin: 0;
+}
+
+.movie-facts div {
+  min-width: 0;
+}
+
+.movie-facts dt {
+  color: var(--red-bright);
+  font: 700 .61rem Arial, sans-serif;
+  letter-spacing: .14em;
+}
+
+.movie-facts dd {
+  margin: .16rem 0 0;
+  color: #d4cbbb;
+  font-size: .78rem;
+}
+
+.movie-overview {
+  display: -webkit-box;
+  margin: 1rem 0 0;
+  overflow: hidden;
+  color: var(--muted);
+  font-size: .8rem;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
 .history summary {
   display: flex;
   justify-content: space-between;
@@ -850,6 +923,9 @@ select:disabled { cursor: not-allowed; opacity: .4; }
   .timeline-year__head::after { top: 2.4rem; right: auto; left: .15rem; }
   .timeline-year__entries { gap: 1rem; padding-left: 2rem; }
   .movie-card__date { display: none; }
+  .movie-profile { grid-template-columns: 5.2rem minmax(0, 1fr); gap: 1rem; padding: 1.1rem; }
+  .movie-facts { grid-template-columns: 1fr; gap: .5rem; }
+  .movie-overview { -webkit-line-clamp: 2; }
 }
 
 @media (max-width: 440px) {
