@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="灯影刘肉丝公开电影评级的非官方本地档案。">
+  <title>灯影刘肉丝电影评级档案</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#archive">跳到档案列表</a>
+
+  <header class="masthead">
+    <div class="masthead__inner">
+      <div class="masthead__topline">
+        <p class="eyebrow">非官方 · 公开动态整理</p>
+        <p class="issue-no">档案号 / 4140446</p>
+      </div>
+      <div class="title-lockup">
+        <span class="title-lockup__mark" aria-hidden="true">影</span>
+        <div>
+          <h1>灯影刘肉丝<br><em>电影评级档案</em></h1>
+          <p class="lede">把散落在时间里的银幕判断，按原样装订成册。</p>
+        </div>
+      </div>
+      <div class="meta-strip" aria-label="档案统计">
+        <div><strong id="stat-reviewed">—</strong><span>已审阅动态</span></div>
+        <div><strong id="stat-movies">—</strong><span>收录电影</span></div>
+        <div><strong id="stat-cutoff">—</strong><span>采集截止</span></div>
+        <div><strong id="stat-earliest">—</strong><span>最早可见</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main id="archive">
+    <section class="archive-intro" aria-labelledby="archive-heading">
+      <div>
+        <p class="section-index">CHRONOLOGY / 评级时间线</p>
+        <h2 id="archive-heading">银幕判词，<br>依时归档</h2>
+      </div>
+      <div class="archive-intro__note">
+        <span aria-hidden="true">阅</span>
+        <p id="scope-note">“全历史”仅指采集时当前公开可访问的明确评级，不包含已删除、隐藏或无法核验的内容。</p>
+      </div>
+    </section>
+
+    <section class="archive-key" aria-label="档案说明">
+      <article>
+        <p>01 / 阅读方式</p>
+        <h3>以评分日期为轴</h3>
+        <span>这里记录的是公开评级发生的时间，不是电影上映日期。</span>
+      </article>
+      <article>
+        <p>02 / 正式八档</p>
+        <h3>天 · 地 · 玄 · 黄</h3>
+        <span>及破、烂、溜、丢；上中下等作为独立细分保留。</span>
+      </article>
+      <article>
+        <p>03 / 特殊判词</p>
+        <h3>不强行归入序列</h3>
+        <span>“一口钟”“软泥怪”等原样保存，与正式评级分开筛选。</span>
+      </article>
+    </section>
+
+    <section class="filter-panel" aria-label="筛选电影档案">
+      <div class="filter-panel__head">
+        <div>
+          <span class="filter-kicker">INDEX / 检索台</span>
+          <h2>从档案中取片</h2>
+        </div>
+        <p>条件可组合使用</p>
+      </div>
+      <label class="search-field">
+        <span>片名或别名</span>
+        <input id="search" type="search" placeholder="输入片名，即时查找" autocomplete="off">
+      </label>
+      <label>
+        <span>评分年份</span>
+        <select id="year-filter">
+          <option value="">全部年份</option>
+        </select>
+      </label>
+      <label>
+        <span>评级等级</span>
+        <select id="tier-filter">
+          <option value="">全部等级</option>
+          <option value="天">天级</option>
+          <option value="地">地级</option>
+          <option value="玄">玄级</option>
+          <option value="黄">黄级</option>
+          <option value="破">破级</option>
+          <option value="烂">烂级</option>
+          <option value="溜">溜级</option>
+          <option value="丢">丢级</option>
+          <option value="special">特殊评级</option>
+        </select>
+      </label>
+      <label>
+        <span>评级细分</span>
+        <select id="subtier-filter">
+          <option value="">全部细分</option>
+          <option value="上等">上等</option>
+          <option value="中等">中等</option>
+          <option value="下等">下等</option>
+          <option value="none">无细分</option>
+        </select>
+      </label>
+      <label>
+        <span>评分时间顺序</span>
+        <select id="sort-order">
+          <option value="latest">最新在前</option>
+          <option value="earliest">最早在前</option>
+        </select>
+      </label>
+      <button id="clear-filters" class="clear-button" type="button">清空条件</button>
+    </section>
+
+    <div class="result-bar">
+      <p id="result-count" aria-live="polite">正在装载档案…</p>
+      <span aria-hidden="true">●</span>
+      <p>评级按公开动态原始表述保存</p>
+    </div>
+
+    <section id="movie-grid" class="archive-timeline" aria-label="按评分日期排列的电影评级时间线"></section>
+
+    <section id="empty-state" class="empty-state" hidden>
+      <p class="empty-state__stamp" aria-hidden="true">空场</p>
+      <h2 id="empty-title">没有匹配的电影</h2>
+      <p id="empty-copy">换个片名，或清空筛选条件再试。</p>
+    </section>
+
+    <noscript>
+      <section class="empty-state">
+        <h2>需要启用 JavaScript</h2>
+        <p>本站数据保存在本地脚本中；启用 JavaScript 后即可离线浏览与搜索。</p>
+      </section>
+    </noscript>
+  </main>
+
+  <footer>
+    <p>非官方整理 · 仅保留核验所需短摘录 · 数据来源：B站 UID 4140446 当前公开动态</p>
+  </footer>
+
+  <script src="ratings.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
