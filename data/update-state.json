@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "uid": "4140446",
+  "dynamicUrl": "https://space.bilibili.com/4140446/dynamic",
+  "checkpoint": {
+    "checkedAt": "2026-10-27T10:19:19+08:00",
+    "status": "complete",
+    "anchors": [
+      {
+        "dynamicId": "1257039436125831186",
+        "url": "https://t.bilibili.com/1257039436125831186",
+        "publishedAt": "2026-10-09T11:15+08:00",
+        "timePrecision": "minute",
+        "localCardIndex": 2,
+        "excerpt": "两部值得看，剩下全完蛋！历史最难看国庆档观影总结"
+      },
+      {
+        "dynamicId": "1255558625898790921",
+        "url": "https://t.bilibili.com/1255558625898790921",
+        "publishedAt": "2026-10-05T11:28+08:00",
+        "timePrecision": "minute",
+        "localCardIndex": 3,
+        "excerpt": "睡醒之后回味了一下，评级调到地级中等，这电影太TM好了，具体的视频说。"
+      },
+      {
+        "dynamicId": "1255407765180907544",
+        "url": "https://t.bilibili.com/1255407765180907544",
+        "publishedAt": "2026-10-05T01:43+08:00",
+        "timePrecision": "minute",
+        "localCardIndex": 4,
+        "excerpt": "生化危机爆发夜 玄级上等"
+      }
+    ]
+  },
+  "calibration": {
+    "checkedAt": "2026-10-27T10:19:19+08:00",
+    "kind": "boundary-calibration",
+    "previousCollectionDate": "2026-10-27",
+    "previousDataCommit": "e3e7ad9819888749d833ce3e3bbbb9ebacda63a1",
+    "newDynamicCount": null,
+    "reviewedUniqueCards": 4,
+    "includedCards": 2,
+    "excludedCards": 2,
+    "newMovies": 0,
+    "newRatingEvents": 0,
+    "note": "原检查点只有日期且旧顶部排除卡无身份记录；本次仅核查顶部至已收录原评级，建立未来增量边界，不能证明相较旧快照的精确新增动态数。",
+    "legacyAudit": {
+      "reviewedCards": 462,
+      "includedCardsBefore": 161,
+      "excludedCardsBefore": 301,
+      "includedCardsAfter": 162,
+      "excludedCardsAfter": 300,
+      "movieCount": 164,
+      "ratingEventCount": 170,
+      "note": "卡片 #3 是转发调级，原评级实际为 #4；旧数据两事件均挂 #3。本次纠正来源归属，事件总数不变。其他历史卡未重新遍历。"
+    },
+    "cards": [
+      {
+        "localCardIndex": 1,
+        "dynamicId": "1225645029039538184",
+        "url": "https://t.bilibili.com/1225645029039538184",
+        "publishedAt": "2026-07-16T20:48+08:00",
+        "timePrecision": "minute",
+        "pinned": true,
+        "excerpt": "专门给新来的朋友置顶个评级标准",
+        "decision": "exclude",
+        "reason": "置顶评级标准及对既有评价的说明；未作新的评级或调级，不重复创建既有四渡评级。",
+        "movies": []
+      },
+      {
+        "localCardIndex": 2,
+        "dynamicId": "1257039436125831186",
+        "url": "https://t.bilibili.com/1257039436125831186",
+        "publishedAt": "2026-10-09T11:15+08:00",
+        "timePrecision": "minute",
+        "pinned": false,
+        "excerpt": "两部值得看，剩下全完蛋！历史最难看国庆档观影总结",
+        "decision": "exclude",
+        "reason": "视频投稿卡；当前公开动态标题没有明确八档或特殊评级，不从视频标题或评论推断评级。",
+        "movies": []
+      },
+      {
+        "localCardIndex": 3,
+        "dynamicId": "1255558625898790921",
+        "url": "https://t.bilibili.com/1255558625898790921",
+        "publishedAt": "2026-10-05T11:28+08:00",
+        "timePrecision": "minute",
+        "pinned": false,
+        "excerpt": "睡醒之后回味了一下，评级调到地级中等，这电影太TM好了，具体的视频说。",
+        "decision": "include",
+        "reason": "本人转发自己的生化危机爆发夜原评级，明确调到地级中等；该调级事件已在档案中。",
+        "movies": ["生化危机爆发夜"],
+        "quotedDynamicId": "1255407765180907544",
+        "event": {"title": "生化危机爆发夜", "rawRating": "地级中等", "status": "调级"}
+      },
+      {
+        "localCardIndex": 4,
+        "dynamicId": "1255407765180907544",
+        "url": "https://t.bilibili.com/1255407765180907544",
+        "publishedAt": "2026-10-05T01:43+08:00",
+        "timePrecision": "minute",
+        "pinned": false,
+        "excerpt": "生化危机爆发夜 玄级上等",
+        "decision": "include",
+        "reason": "本人明确片名与评级；原事件已存在，本次仅将错误的卡片 #3 归属修正到 #4。",
+        "movies": ["生化危机爆发夜"],
+        "event": {"title": "生化危机爆发夜", "rawRating": "玄级上等", "status": "明确评级"}
+      }
+    ]
+  },
+  "batches": []
+}
