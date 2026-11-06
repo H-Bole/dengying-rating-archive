@@ -3,7 +3,7 @@
   "uid": "4140446",
   "dynamicUrl": "https://space.bilibili.com/4140446/dynamic",
   "checkpoint": {
-    "checkedAt": "2026-11-06T01:00:20+08:00",
+    "checkedAt": "2026-11-07T00:59:35+08:00",
     "status": "complete",
     "anchors": [
       {
@@ -321,6 +321,71 @@
       "checkedAt": "2026-11-06T01:00:20+08:00",
       "status": "complete",
       "previousCheckedAt": "2026-11-05T01:05:04+08:00",
+      "fromAnchors": [
+        {
+          "dynamicId": "1263886013393010710",
+          "url": "https://t.bilibili.com/1263886013393010710",
+          "publishedAt": "2026-10-27T22:03+08:00",
+          "timePrecision": "minute",
+          "localCardIndex": 463,
+          "excerpt": "深度解析影史最佳寻宝喜剧《飞鹰计划》"
+        },
+        {
+          "dynamicId": "1257039436125831186",
+          "url": "https://t.bilibili.com/1257039436125831186",
+          "publishedAt": "2026-10-09T11:15+08:00",
+          "timePrecision": "minute",
+          "localCardIndex": 2,
+          "excerpt": "两部值得看，剩下全完蛋！历史最难看国庆档观影总结"
+        },
+        {
+          "dynamicId": "1255558625898790921",
+          "url": "https://t.bilibili.com/1255558625898790921",
+          "publishedAt": "2026-10-05T11:28+08:00",
+          "timePrecision": "minute",
+          "localCardIndex": 3,
+          "excerpt": "睡醒之后回味了一下，评级调到地级中等，这电影太TM好了，具体的视频说。"
+        }
+      ],
+      "toAnchors": [
+        {
+          "dynamicId": "1263886013393010710",
+          "url": "https://t.bilibili.com/1263886013393010710",
+          "publishedAt": "2026-10-27T22:03+08:00",
+          "timePrecision": "minute",
+          "localCardIndex": 463,
+          "excerpt": "深度解析影史最佳寻宝喜剧《飞鹰计划》"
+        },
+        {
+          "dynamicId": "1257039436125831186",
+          "url": "https://t.bilibili.com/1257039436125831186",
+          "publishedAt": "2026-10-09T11:15+08:00",
+          "timePrecision": "minute",
+          "localCardIndex": 2,
+          "excerpt": "两部值得看，剩下全完蛋！历史最难看国庆档观影总结"
+        },
+        {
+          "dynamicId": "1255558625898790921",
+          "url": "https://t.bilibili.com/1255558625898790921",
+          "publishedAt": "2026-10-05T11:28+08:00",
+          "timePrecision": "minute",
+          "localCardIndex": 3,
+          "excerpt": "睡醒之后回味了一下，评级调到地级中等，这电影太TM好了，具体的视频说。"
+        }
+      ],
+      "newDynamicCount": 0,
+      "reviewedUniqueCards": 0,
+      "includedCards": 0,
+      "excludedCards": 0,
+      "newMovies": 0,
+      "oldMoviesWithNewRatings": 0,
+      "newRatingEvents": 0,
+      "cards": []
+    },
+    {
+      "checkedAt": "2026-11-07T00:59:35+08:00",
+      "status": "complete",
+      "previousCheckedAt": "2026-11-06T01:00:20+08:00",
       "fromAnchors": [
         {
           "dynamicId": "1263886013393010710",
