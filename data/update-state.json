@@ -3,7 +3,7 @@
   "uid": "4140446",
   "dynamicUrl": "https://space.bilibili.com/4140446/dynamic",
   "checkpoint": {
-    "checkedAt": "2026-11-13T01:05:36+08:00",
+    "checkedAt": "2026-11-14T01:04:52+08:00",
     "status": "complete",
     "anchors": [
       {
@@ -731,6 +731,71 @@
       "checkedAt": "2026-11-13T01:05:36+08:00",
       "status": "complete",
       "previousCheckedAt": "2026-11-12T01:02:59+08:00",
+      "fromAnchors": [
+        {
+          "dynamicId": "1267950096182411273",
+          "url": "https://t.bilibili.com/1267950096182411273",
+          "publishedAt": "2026-11-07T20:53+08:00",
+          "timePrecision": "minute",
+          "localCardIndex": 464,
+          "excerpt": "我们仅有一次的人生  黄级"
+        },
+        {
+          "dynamicId": "1263886013393010710",
+          "url": "https://t.bilibili.com/1263886013393010710",
+          "publishedAt": "2026-10-27T22:03+08:00",
+          "timePrecision": "minute",
+          "localCardIndex": 463,
+          "excerpt": "深度解析影史最佳寻宝喜剧《飞鹰计划》"
+        },
+        {
+          "dynamicId": "1257039436125831186",
+          "url": "https://t.bilibili.com/1257039436125831186",
+          "publishedAt": "2026-10-09T11:15+08:00",
+          "timePrecision": "minute",
+          "localCardIndex": 2,
+          "excerpt": "两部值得看，剩下全完蛋！历史最难看国庆档观影总结"
+        }
+      ],
+      "toAnchors": [
+        {
+          "dynamicId": "1267950096182411273",
+          "url": "https://t.bilibili.com/1267950096182411273",
+          "publishedAt": "2026-11-07T20:53+08:00",
+          "timePrecision": "minute",
+          "localCardIndex": 464,
+          "excerpt": "我们仅有一次的人生  黄级"
+        },
+        {
+          "dynamicId": "1263886013393010710",
+          "url": "https://t.bilibili.com/1263886013393010710",
+          "publishedAt": "2026-10-27T22:03+08:00",
+          "timePrecision": "minute",
+          "localCardIndex": 463,
+          "excerpt": "深度解析影史最佳寻宝喜剧《飞鹰计划》"
+        },
+        {
+          "dynamicId": "1257039436125831186",
+          "url": "https://t.bilibili.com/1257039436125831186",
+          "publishedAt": "2026-10-09T11:15+08:00",
+          "timePrecision": "minute",
+          "localCardIndex": 2,
+          "excerpt": "两部值得看，剩下全完蛋！历史最难看国庆档观影总结"
+        }
+      ],
+      "newDynamicCount": 0,
+      "reviewedUniqueCards": 0,
+      "includedCards": 0,
+      "excludedCards": 0,
+      "newMovies": 0,
+      "oldMoviesWithNewRatings": 0,
+      "newRatingEvents": 0,
+      "cards": []
+    },
+    {
+      "checkedAt": "2026-11-14T01:04:52+08:00",
+      "status": "complete",
+      "previousCheckedAt": "2026-11-13T01:05:36+08:00",
       "fromAnchors": [
         {
           "dynamicId": "1267950096182411273",
